@@ -44,14 +44,14 @@ const titleClickHandler = function(event) {
   
     targetArticle.classList.add('active');
     console.log('targetArticle (with plus): ' + targetArticle);
-    
-  }
-const links = document.querySelectorAll('.titles a');
-for(let link of links){
- link.addEventListener('click', titleClickHandler);
 }
-{
-  const optArticleSelector = '.post',
+
+//const links = document.querySelectorAll('.titles a');
+//for(let link of links){
+  //link.addEventListener('click', titleClickHandler);
+//}
+
+const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles';
   optArticleTagsSelector = '.post-tags .list' 
@@ -99,6 +99,7 @@ function generateTitleLinks(customSelector = ''){
   }
 
   titleList.innerHTML = html;
+  
   const links = document.querySelectorAll('.titles a');
   console.log('!!!!links:', links);
   for (let link of links) {
@@ -108,4 +109,3 @@ function generateTitleLinks(customSelector = ''){
 
 generateTitleLinks();
 console.log('wywołano fn generateTitleLinks');
-}
